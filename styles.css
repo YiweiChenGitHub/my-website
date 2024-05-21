@@ -10,12 +10,22 @@ header {
     background-color: #333;
     color: #fff;
     padding: 1em 0;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    background-color: #333;
+    margin: 0;
+    padding: 1em 0;
 }
 
 nav ul li {
@@ -31,9 +41,50 @@ main {
     padding: 2em;
     max-width: 800px;
     margin: auto;
+    text-align: center;
+    margin-top: 2em; /* Adding top margin to adjust for the banner */
 }
 
 h1, h2, h3 {
     color: #333;
 }
 
+.profile-container {
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+    text-align: center; /* Center the text below the image */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;  /* Ensure the image maintains its aspect ratio and covers the container */
+}
+
+.profile-photo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.typewriter {
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+    border-right: 0.15em solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
